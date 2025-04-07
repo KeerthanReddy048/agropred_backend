@@ -386,7 +386,11 @@ def login():
     send_login_email(email,username['username'])
     return jsonify({"message": "Login successful!", "token": token}), 200
 
+import os
+
+port = int(os.environ.get("PORT", 5000))
+#app.run(host="0.0.0.0", port=port)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=port,debug=True)
