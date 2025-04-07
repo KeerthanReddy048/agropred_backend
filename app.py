@@ -44,14 +44,14 @@ models = {}
 traits = ['DH_Pooled', 'GFD_Pooled', 'GNPS_Pooled', 'GWPS_Pooled', 'PH_Pooled', 'GY_Pooled']
 
 for trait in traits:
-    with open(f"C:/Users/keert/OneDrive/Desktop/AgroPredA-19/flask-backend/{trait}_model.pkl", "rb") as f:
+    with open(f"/{trait}_model.pkl", "rb") as f:
         models[trait] = joblib.load(f)
 
 # Load scalers
-with open("C:/Users/keert/OneDrive/Desktop/AgroPredA-19/flask-backend/scaler_X.pkl", "rb") as f:
+with open("/scaler_X.pkl", "rb") as f:
     loaded_scaler_X = joblib.load(f)
 
-with open("C:/Users/keert/OneDrive/Desktop/AgroPredA-19/flask-backend/scaler_y.pkl", "rb") as f:
+with open("/scaler_y.pkl", "rb") as f:
     loaded_scaler_y = joblib.load(f)
 
 
@@ -102,7 +102,7 @@ import io
 
 # Load Model
 model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=False, num_classes=2)
-model.load_state_dict(torch.load(r"C:\Users\keert\OneDrive\Desktop\global-wheat-detection\fasterrcnn_resnet50_epochUpdated.pth", map_location=torch.device('cpu')))
+model.load_state_dict(torch.load("fasterrcnn_resnet50_epochUpdated.pth", map_location=torch.device('cpu')))
 model.eval()
 
 # Preprocess function
@@ -125,7 +125,7 @@ def get_boxes(prediction, threshold=0.5):
         boxes=[]
         return boxes
 
-model_path = r"C:\Users\keert\Downloads\image_source_classifier.h5"  # Path to the trained model
+model_path = "image_source_classifier_Final.h5"  # Path to the trained model
 
 
 # Parameters
