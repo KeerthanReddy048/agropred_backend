@@ -44,7 +44,7 @@ models = {}
 traits = ['DH_Pooled', 'GFD_Pooled', 'GNPS_Pooled', 'GWPS_Pooled', 'PH_Pooled', 'GY_Pooled']
 
 for trait in traits:
-    with open(f"/{trait}_model.pkl", "rb") as f:
+    with open(f"{trait}_model.pkl", "rb") as f:
         models[trait] = joblib.load(f)
 
 # Load scalers
