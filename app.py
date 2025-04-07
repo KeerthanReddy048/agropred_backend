@@ -48,10 +48,10 @@ for trait in traits:
         models[trait] = joblib.load(f)
 
 # Load scalers
-with open("/scaler_X.pkl", "rb") as f:
+with open("scaler_X.pkl", "rb") as f:
     loaded_scaler_X = joblib.load(f)
 
-with open("/scaler_y.pkl", "rb") as f:
+with open("scaler_y.pkl", "rb") as f:
     loaded_scaler_y = joblib.load(f)
 
 
