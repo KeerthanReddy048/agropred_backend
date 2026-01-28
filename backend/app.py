@@ -44,14 +44,14 @@ models = {}
 traits = ['DH_Pooled', 'GFD_Pooled', 'GNPS_Pooled', 'GWPS_Pooled', 'PH_Pooled', 'GY_Pooled']
 
 for trait in traits:
-    with open(f"C:/Users/keert/OneDrive/Desktop/AgroPredA-19/flask-backend/{trait}_model.pkl", "rb") as f:
+    with open(f"{trait}_model.pkl", "rb") as f:
         models[trait] = joblib.load(f)
 
 # Load scalers
-with open("C:/Users/keert/OneDrive/Desktop/AgroPredA-19/flask-backend/scaler_X.pkl", "rb") as f:
+with open("scaler_X.pkl", "rb") as f:
     loaded_scaler_X = joblib.load(f)
 
-with open("C:/Users/keert/OneDrive/Desktop/AgroPredA-19/flask-backend/scaler_y.pkl", "rb") as f:
+with open("scaler_y.pkl", "rb") as f:
     loaded_scaler_y = joblib.load(f)
 
 
@@ -262,7 +262,7 @@ def send_login_email(email,username):
 def send_verification_email(email, username):
     try:
         token = generate_token(email)
-        verify_link = f"http://127.0.0.1:5000/api/verify/{token}"
+        verify_link = f"https://agropred-backend-kr.onrender.com/api/verify/{token}"
 
         # Create message container
         msg = MIMEMultipart("alternative")
@@ -390,4 +390,5 @@ def login():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
