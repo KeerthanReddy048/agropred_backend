@@ -55,10 +55,10 @@ with open("C:/Users/keert/OneDrive/Desktop/AgroPredA-19/flask-backend/scaler_y.p
     loaded_scaler_y = joblib.load(f)
 
 
-import numpy as np
+"""import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
-import sys
+import sys"""
 
 # Paths
 
@@ -91,7 +91,7 @@ def get_pred():
 
 #from flask import Flask, request, jsonify
 #from flask_cors import CORS
-import torch
+"""import torch
 import torchvision
 from torchvision import transforms
 from PIL import Image
@@ -160,7 +160,7 @@ def predict():
     if(len(boxes)==0):
         result="Image Error"
     return jsonify(result)
-    #return jsonify("Image Error")
+    #return jsonify("Image Error")"""
 
 # Email Configuration
 SMTP_SERVER = "smtp.gmail.com"     # Gmail SMTP server
@@ -390,3 +390,4 @@ def login():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
