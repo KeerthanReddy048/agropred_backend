@@ -44,14 +44,14 @@ models = {}
 traits = ['DH_Pooled', 'GFD_Pooled', 'GNPS_Pooled', 'GWPS_Pooled', 'PH_Pooled', 'GY_Pooled']
 
 for trait in traits:
-    with open(f"agropred_backend/{trait}_model.pkl", "rb") as f:
+    with open(f"{trait}_model.pkl", "rb") as f:
         models[trait] = joblib.load(f)
 
 # Load scalers
-with open("agropred_backend/scaler_X.pkl", "rb") as f:
+with open("scaler_X.pkl", "rb") as f:
     loaded_scaler_X = joblib.load(f)
 
-with open("agropred_backend/scaler_y.pkl", "rb") as f:
+with open("scaler_y.pkl", "rb") as f:
     loaded_scaler_y = joblib.load(f)
 
 
@@ -316,6 +316,7 @@ def login():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 
 
