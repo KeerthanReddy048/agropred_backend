@@ -9,8 +9,8 @@ from datetime import timedelta
 from flask import Flask, request, jsonify
 import numpy as np
 import os
-from tensorflow.keras.models import load_model
-from PIL import Image
+#from tensorflow.keras.models import load_model
+#from PIL import Image
 from dotenv import load_dotenv
 from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
@@ -390,5 +390,6 @@ def login():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 
