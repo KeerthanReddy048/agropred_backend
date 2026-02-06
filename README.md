@@ -1,5 +1,6 @@
-🌾 AgroPred
+🌾 AgroPred - agropred.netlify.app
 Enhancing Wheat Breeding with Multi-Trait Genomic Prediction & AI-Based Crop Monitoring.
+
 AgroPred is an AI-driven agricultural intelligence platform designed to assist researchers, breeders, and agronomists in predicting wheat phenotypic traits using genomic data and monitoring wheat development stages using images.
 The project integrates machine learning, deep learning, image processing, and a web-based system to provide actionable insights for modern wheat breeding programs.
 
